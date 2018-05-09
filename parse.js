@@ -25,7 +25,7 @@ function parseBurgerList() {
 	$('.iconic_count').each((i, el) => {
 		let burger = {};
 		burger.name = strip($(el).find('h4').text());
-		burger.link = strip($(el).find('a').attr('href'));
+		burger.link = $(el).find('a').attr('href');
 		burgers.push(burger);
 	});
 	parseBurgersData(burgers);
@@ -48,7 +48,7 @@ function parseBurger(link) {
 			$ = cheerio.load(html);
 			burger.ingredients = [];
 			$('.ingredient-text').each((i, el) => {
-				burger.ingredients.push($(el).text().toLowerCase());
+				burger.ingredients.push(strip($(el).text().toLowerCase()));
 			});
 			return burger;
 		})
