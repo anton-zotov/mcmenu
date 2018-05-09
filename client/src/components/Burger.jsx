@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-	Card, CardImg, CardText, CardBody,
-	CardTitle, CardSubtitle, Button, Row, Col
+	Card, CardBody, CardTitle, Col
 } from 'reactstrap';
 
 class Burger extends Component {

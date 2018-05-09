@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Burger from './Burger';
-import {
-	Card, CardImg, CardText, CardBody,
-	CardTitle, CardSubtitle, Button, Row, Col
-} from 'reactstrap';
+import { Row } from 'reactstrap';
 
 class BurgerList extends Component {
 	constructor() {
@@ -13,7 +10,7 @@ class BurgerList extends Component {
 		};
 	}
 	componentDidMount() {
-		fetch('/api/burgers')
+		fetch('http://127.0.0.1:8038/api/burgers')
 			.then(res => res.json())
 			.then(burgers => this.setState({ burgers }))
 			.catch(err => console.error(err));
@@ -21,7 +18,7 @@ class BurgerList extends Component {
 	render() {
 		return (
 			<Row>
-				{this.state.burgers.map(burger => <Burger key={burger.name} {...burger}/>)}
+				{this.state.burgers.map(burger => <Burger key={burger.name} {...burger} />)}
 			</Row>
 		);
 	}

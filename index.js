@@ -1,12 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
+const cors = require('cors')
 const express = require('express');
 const burgers = require('./burgers')
 
 
 const app = express();
 app.set('port', 8038);
+app.use(cors());
 
 app.get('/api/burgers', function (req, res) {
 	res.json(burgers());
