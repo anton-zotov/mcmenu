@@ -10,7 +10,7 @@ class BurgerList extends Component {
 		};
 	}
 	componentDidMount() {
-		fetch('http://127.0.0.1:8038/api/burgers')
+		fetch('/api/burgers')
 			.then(res => res.json())
 			.then(burgers => this.setState({ burgers }))
 			.catch(err => console.error(err));
