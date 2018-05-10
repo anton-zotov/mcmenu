@@ -1,0 +1,13 @@
+table thead{
+	font-size: 0.8rem;
+}
+.table-holder {
+	overflow-x: auto;
+}
+table tr:nth-child(2n+3) {
+	background-color: #eee;
+}
+table td {
+	text-align: center;
+	border-right: 1px solid rgba(100, 100, 100, 0.3);
+}

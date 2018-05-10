@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
 import './App.css';
-import BurgerList from './components/BurgerList';
+import BurgerContainer from './components/BurgerContainer';
 
 class App extends Component {
 	render() {
 		return (
 			<Container>
-				<BurgerList />
+				<BurgerContainer />
 			</Container>
 		);
 	}
